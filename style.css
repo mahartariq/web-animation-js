@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+}
+
+#bg{
+    background: url(images/background.png);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+#clouds{
+    left: 110%;
+    position: absolute;
+}
+
+
+#cloud1{
+    width: 190px;
+    height: 270px;
+    position: absolute;
+    left: 110%;
+}
+
+#cloud2{
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    left: 120%;
+}
+#cloud3{
+    width: 210px;
+    height: 190px;
+    position: absolute;
+    left: 140%;
+}
+
+
+#cycle{
+    top: 55%;
+    left: 40%;
+    width: 200px;
+    height: 220px;
+    position: absolute;
+}
+
+#sun{
+    height: 100px;
+    width: 100px;
+    left: 90%;
+    position: absolute;
+}
+#boat{
+    position: absolute;
+    top: 45%;
+    height: 140px;
+    width: 130px;
+    left: -10%;
+}
+
+#tree{
+    position: absolute;
+    left: 100%;
+    width: 100px;
+    height: 210px;
+    top: 40%;
+}
+
+#ship{
+    width: 100%;
+}
