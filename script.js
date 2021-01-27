@@ -2,7 +2,7 @@
 
 window.addEventListener("load",function(){
 
-    document.getElementById("boat").animate([
+    var ship = document.getElementById("boat").animate([
         {transform:"translateX(1200%)"}
     ],{
         duration:55000,
@@ -10,19 +10,20 @@ window.addEventListener("load",function(){
     })
 
 
-    document.getElementById("cloud1").animate([
+    var cloud1 = document.getElementById("cloud1").animate([
         {transform:"translateX(-1110%)"}
     ],{
         duration:35000,
         iterations:Infinity
     })
-    document.getElementById("cloud2").animate([
+
+    var cloud2 = document.getElementById("cloud2").animate([
         {transform:"translateX(-1210%)"}
     ],{
         duration:23000,
         iterations:Infinity
     })
-    document.getElementById("cloud3").animate([
+    var cloud3 = document.getElementById("cloud3").animate([
         {transform:"translateX(-1310%)"}
     ],{
         duration:31000,
@@ -41,7 +42,7 @@ window.addEventListener("load",function(){
     })
 
 
-    document.getElementById("tree").animate([{
+    var tree = document.getElementById("tree").animate([{
         transform:"translateX(-2400%)",
     }],{
         duration:49000,
@@ -57,4 +58,41 @@ window.addEventListener("load",function(){
         direction:"alternate",
         easing:"ease-in-out"
     })
+    const goFaster =()=>{
+        cloud1.playbackRate *= 1.1;
+        cloud2.playbackRate *= 1.1;        
+        cloud3.playbackRate *= 1.1;
+        tree.playbackRate *= 1.1;
+    }
+    
+
+
+
+    setInterval(function () {
+        if(cloud1.playbackRate> 0.4){
+            cloud1.playbackRate *= 0.9;
+            console.log(cloud1.playbackRate);
+            cloud2.playbackRate *= 0.9;
+            console.log(cloud2.playbackRate);
+            cloud3.playbackRate *=0.9;
+            console.log(cloud3.playbackRate);
+            tree.playbackRate *=0.9;
+            console.log(tree.playbackRate);
+        }
+    },3000)
+    
+
+
+
+
+
+
+    document.addEventListener("click", goFaster);
 })
+
+
+
+
+
+
+
